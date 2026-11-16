@@ -41,7 +41,7 @@ python3 -m http.server 4173 --directory dist
 
 ## Use the application
 
-1. Connect an EIP-1193 injected wallet. EIP-6963 discovery lists independent providers; fallback discovery covers legacy MetaMask, OKX, Rabby and Coinbase Wallet providers. Wallet-specific signing compatibility must be verified in the target browser.
+1. Connect an EIP-1193 injected wallet, or choose **Create temporary Studionet wallet** for a disposable real signer funded by the official Studio faucet. The temporary key lives only in this tab’s memory; reload, close or destroy it to discard access. EIP-6963 discovery lists independent providers; fallback discovery covers legacy MetaMask, OKX, Rabby and Coinbase Wallet providers. Wallet-specific signing compatibility must be verified in the target browser.
 2. Switch or add Stable Studionet when requested.
 3. Create a manifest with a unique lowercase reference, application name, environment, Ubuntu codename and the actual lowercase SHA-256 of your artifact. The file picker hashes locally; it never uploads the file. The codename is a declaration, not a proven property of the artifact.
 4. Sign `propose`. Wait for FINALIZED and successful execution, then inspect the finalized record.
@@ -50,6 +50,8 @@ python3 -m http.server 4173 --directory dist
 7. Download the receipt and readback. Use the CI consumer below before honoring an approval. A released manifest is immutable; create a new manifest for a different digest or base. A newer matching released ticket can supersede the older record.
 
 Only chain reads populate the ledger. The signing wallet signs writes through its own provider. The app polls the GenLayer transaction, requires FINALIZED + SUCCESS, then reads `latest-final`. A pending hash is retained in session storage so monitoring can resume after a reload without automatically resubmitting.
+
+See [temporary wallet behavior](docs/temporary-wallet.md) before using a disposable account.
 
 ## CI integration
 

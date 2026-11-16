@@ -1,0 +1,22 @@
+{
+  "site": "https://xiaoyu7799.github.io/supportgate-genlayer/",
+  "chainId": 61999,
+  "account": "0x23E933Aa65C38259d8fbACaB32a2790fba563697",
+  "faucet": {
+    "method": "sim_fundAccount",
+    "rpc": "https://studio.genlayer.com/api",
+    "address": "0x23E933Aa65C38259d8fbACaB32a2790fba563697",
+    "requestedWei": "1000000000000000000",
+    "beforeWei": "0",
+    "afterWei": "1000000000000000000",
+    "response": "0x90d03b0dfc0b5202d43af5579c0ca7c417d920c76ada07c8474311d8f1f84802"
+  },
+  "startedAt": "2026-11-16T20:07:32.737Z",
+  "cleanup": {
+    "temporaryKeyRemoved": true,
+    "browserContextClosed": true,
+    "keyPersistedToRepository": false,
+    "at": "2026-11-16T20:07:57.870Z"
+  },
+  "result": "Browser launch failed before any contract write: execution environment denied Chromium IPC socket creation."
+}
