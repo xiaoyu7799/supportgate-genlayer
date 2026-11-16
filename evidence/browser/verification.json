@@ -1,0 +1,85 @@
+{
+  "verifiedAt": "2026-11-16T20:22:20.051Z",
+  "site": "https://xiaoyu7799.github.io/supportgate-genlayer/",
+  "transactions": [
+    {
+      "file": "ui-01-propose.json",
+      "hash": "0xa85bce5436badf291b1e97c826a967fad174043a593f7d66dc462ac945c2e6ac",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 0,
+      "exportedState": "PROPOSED",
+      "exportedRevision": 0,
+      "currentState": "RELEASED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    },
+    {
+      "file": "ui-02-evaluate.json",
+      "hash": "0x2ca1e17c00932b0ded49d32203355fb43ebadd6967a6e5fbc14d04f1d80d3562",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 1,
+      "exportedState": "READY",
+      "exportedRevision": 1,
+      "currentState": "RELEASED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    },
+    {
+      "file": "ui-03-release.json",
+      "hash": "0xfe879293bf00cad3ea251c8a0653542aff3ede27c9c2ecf315ae5a6a7052f5f1",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 2,
+      "exportedState": "RELEASED",
+      "exportedRevision": 2,
+      "currentState": "RELEASED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    },
+    {
+      "file": "ui-04-eol-propose.json",
+      "hash": "0xd301218dce30da5903c7e4fad80b50df1932909197aadb42030449603a171653",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 3,
+      "exportedState": "PROPOSED",
+      "exportedRevision": 0,
+      "currentState": "CANCELLED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    },
+    {
+      "file": "ui-05-eol-evaluate.json",
+      "hash": "0xf97e124ea5649b0711cc12b7dba04867f8fe9949757d4ce473263aeafc853916",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 4,
+      "exportedState": "BLOCKED",
+      "exportedRevision": 1,
+      "currentState": "CANCELLED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    },
+    {
+      "file": "ui-06-eol-cancel.json",
+      "hash": "0x5f4983983fc6f9917a1b8ede1347dd5559f0fa5c56860cdad82ef5d3f3297d9e",
+      "recoveredSigner": "0x583341eA2f8e721CD2daCAbe2D9864fd377986EC",
+      "chainId": 61999,
+      "nonce": 5,
+      "exportedState": "CANCELLED",
+      "exportedRevision": 2,
+      "currentState": "CANCELLED",
+      "finalizedSuccess": true,
+      "signatureVerified": true,
+      "signedHashVerified": true
+    }
+  ],
+  "temporarySignerDestroyed": true
+}

@@ -10,7 +10,7 @@ A release engineer can claim an Ubuntu base is supported; a screenshot or CI fla
 
 ## Current deployment
 
-The contract is deployed on Stable Studionet. The deployed source matches `contracts/supportgate.py` byte for byte. Deployment transaction is FINALIZED with successful execution. The positive propose → evaluate → release lifecycle has FINALIZED/SUCCESS receipts and finalized readbacks. The GitHub Pages site serves the application and reads real finalized state. Full injected-wallet signing acceptance remains unverified. No sample records or simulated transactions are presented as chain state.
+The contract is deployed on Stable Studionet. The deployed source matches `contracts/supportgate.py` byte for byte. Deployment transaction is FINALIZED with successful execution. The positive propose → evaluate → release lifecycle has FINALIZED/SUCCESS receipts and finalized readbacks. The GitHub Pages site serves the application and reads real finalized state. The production frontend has also completed real EIP-1193 temporary-wallet signing, official faucet funding, network setup, finality polling and finalized readback. Third-party wallet extension interfaces are not individually certified. No sample records or simulated transactions are presented as chain state.
 
 - Contract: `0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812`.
 - Deployment: `0xfa8f6b2083735d278088b97113410ccb01c0d15901574c46e58b1544fc2feb01`.

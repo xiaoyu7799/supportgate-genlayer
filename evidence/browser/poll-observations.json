@@ -1,0 +1,50 @@
+[
+  {
+    "at": "2026-11-16T20:14:27.035Z",
+    "title": "Transaction · ACCEPTED",
+    "message": "Waiting for FINALIZED + SUCCESS. The record remains unchanged until finalized readback.",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x2ca1e17c00932b0ded49d32203355fb43ebadd6967a6e5fbc14d04f1d80d3562"
+  },
+  {
+    "at": "2026-11-16T20:14:56.708Z",
+    "title": "Finalized + successful",
+    "message": "Read back revision 1: READY. ",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x2ca1e17c00932b0ded49d32203355fb43ebadd6967a6e5fbc14d04f1d80d3562"
+  },
+  {
+    "at": "2026-11-16T20:15:36.823Z",
+    "title": "Transaction · ACCEPTED",
+    "message": "Waiting for FINALIZED + SUCCESS. The record remains unchanged until finalized readback.",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xfe879293bf00cad3ea251c8a0653542aff3ede27c9c2ecf315ae5a6a7052f5f1"
+  },
+  {
+    "at": "2026-11-16T20:16:04.016Z",
+    "title": "Finalized + successful",
+    "message": "Read back revision 2: RELEASED. ",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xfe879293bf00cad3ea251c8a0653542aff3ede27c9c2ecf315ae5a6a7052f5f1"
+  },
+  {
+    "at": "2026-11-16T20:16:50.398Z",
+    "title": "Transaction · FINALIZED",
+    "message": "Waiting for FINALIZED + SUCCESS. The record remains unchanged until finalized readback.",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xd301218dce30da5903c7e4fad80b50df1932909197aadb42030449603a171653"
+  },
+  {
+    "at": "2026-11-16T20:17:30.739Z",
+    "title": "Transaction · ACCEPTED",
+    "message": "Waiting for FINALIZED + SUCCESS. The record remains unchanged until finalized readback.",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xf97e124ea5649b0711cc12b7dba04867f8fe9949757d4ce473263aeafc853916"
+  },
+  {
+    "at": "2026-11-16T20:18:01.584Z",
+    "title": "Finalized + successful",
+    "message": "Read back revision 1: BLOCKED. The transaction succeeded; policy denied release.",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xf97e124ea5649b0711cc12b7dba04867f8fe9949757d4ce473263aeafc853916"
+  },
+  {
+    "at": "2026-11-16T20:19:01.885Z",
+    "title": "Finalized + successful",
+    "message": "Read back revision 2: CANCELLED. ",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x5f4983983fc6f9917a1b8ede1347dd5559f0fa5c56860cdad82ef5d3f3297d9e"
+  }
+]
