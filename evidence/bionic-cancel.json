@@ -1,0 +1,72 @@
+{
+  "transaction": {
+    "hash": "0xd67c3405f840f85139bd36d40a9f9e86d6ade1137dc5062df51a9b362a9a5987",
+    "from_address": "0xaB46c706e93Dc7c9D4Bfa4955FF562F7510B839F",
+    "to_address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "created_at": "2026-11-16T19:45:00.630560+00:00",
+    "nonce": 6,
+    "consensus_data": {
+      "votes": {
+        "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "agree",
+        "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "idle",
+        "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+        "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "agree",
+        "0xd608c9ABb63F1776c7F0EE447194d8D7ea441b8b": "agree"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "gas_used": 0
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "gas_used": 0
+        }
+      ]
+    }
+  },
+  "readback": {
+    "application": "SupportGate source artifact",
+    "artifact_sha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a",
+    "checked_at": 1794858207,
+    "codename": "bionic",
+    "created_at": 1794857855,
+    "environment": "staging",
+    "history": [
+      {
+        "action": "EVALUATE",
+        "actor": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+        "at": 1794858207,
+        "source": {
+          "codename": "bionic",
+          "found": true,
+          "name": "Bionic Beaver",
+          "source": "https://changelogs.ubuntu.com/meta-release-lts",
+          "supported": true,
+          "version": "18.04.6 LTS"
+        }
+      }
+    ],
+    "id": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f:supportgate-unsupported-1",
+    "owner": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+    "reference": "supportgate-unsupported-1",
+    "revision": 2,
+    "source": {
+      "codename": "bionic",
+      "found": true,
+      "name": "Bionic Beaver",
+      "source": "https://changelogs.ubuntu.com/meta-release-lts",
+      "supported": true,
+      "version": "18.04.6 LTS"
+    },
+    "state": "CANCELLED",
+    "superseded_by": ""
+  },
+  "readbackTiming": "Latest finalized state when evidence was captured; may include later calls."
+}

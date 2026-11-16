@@ -1,0 +1,72 @@
+{
+  "transaction": {
+    "hash": "0x3230dc05e01cbd3acc23808f08bf99f4f0ebdf6d0d4ef09f301796f213bdd8a5",
+    "from_address": "0xaB46c706e93Dc7c9D4Bfa4955FF562F7510B839F",
+    "to_address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "created_at": "2026-11-16T19:46:39.134977+00:00",
+    "nonce": 7,
+    "consensus_data": {
+      "votes": {
+        "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "agree",
+        "0x628f4d491b8753Be1eD022f6D920853b8b541937": "agree",
+        "0xD2762A898b8262acB88024bf7d5Bb4336375cF22": "idle",
+        "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "idle",
+        "0xf20Cb474E5be2f56EA6Be925D057c28f458270da": "agree"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "gas_used": 0
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "gas_used": 0
+        }
+      ]
+    }
+  },
+  "readback": {
+    "application": "SupportGate source artifact",
+    "artifact_sha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a",
+    "checked_at": 1794858454,
+    "codename": "dapper",
+    "created_at": 1794858399,
+    "environment": "staging",
+    "history": [
+      {
+        "action": "EVALUATE",
+        "actor": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+        "at": 1794858454,
+        "source": {
+          "codename": "dapper",
+          "found": true,
+          "name": "Dapper Drake",
+          "source": "https://changelogs.ubuntu.com/meta-release-lts",
+          "supported": false,
+          "version": "6.06 LTS"
+        }
+      }
+    ],
+    "id": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f:supportgate-eol-1",
+    "owner": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+    "reference": "supportgate-eol-1",
+    "revision": 1,
+    "source": {
+      "codename": "dapper",
+      "found": true,
+      "name": "Dapper Drake",
+      "source": "https://changelogs.ubuntu.com/meta-release-lts",
+      "supported": false,
+      "version": "6.06 LTS"
+    },
+    "state": "BLOCKED",
+    "superseded_by": ""
+  },
+  "readbackTiming": "Latest finalized state when evidence was captured; may include later calls."
+}

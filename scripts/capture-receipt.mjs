@@ -1,0 +1,15 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {readClient,read,isSuccess,stringify} from '../src/chain.js';
+const [hash,id,name]=process.argv.slice(2);
+if(!/^0x[0-9a-fA-F]{64}$/.test(hash||'')||!id||!/^[a-z0-9-]+$/.test(name||''))throw new Error('Usage: node scripts/capture-receipt.mjs TX_HASH TICKET_ID filename-without-extension');
+const config=JSON.parse(await readFile('public/deployment.json','utf8'));
+const tx=await readClient.getTransaction({hash});
+const fields=['hash','from_address','to_address','status','statusName','resultName','txExecutionResultName','created_at','type','nonce'];
+const receipt=Object.fromEntries(fields.filter(k=>k in tx).map(k=>[k,tx[k]]));
+const consensus=tx.consensus_data||{};
+receipt.consensus_data={final:consensus.final,votes:consensus.votes,leader_receipt:(consensus.leader_receipt||[]).map(r=>Object.fromEntries(['execution_result','error','vote','mode','gas_used'].filter(k=>k in r).map(k=>[k,r[k]])))};
+const state=await read(config.address,'get_ticket',[id]);
+await mkdir('evidence',{recursive:true});
+await writeFile('evidence/'+name+'.json',stringify({transaction:receipt,readback:state,readbackTiming:'Latest finalized state when evidence was captured; may include later calls.'})+'\n');
+console.log(stringify({hash,status:tx.statusName,success:isSuccess(tx),state:state.state,sourceSupported:state.source?.supported,revision:state.revision}));
+if(!isSuccess(tx))throw new Error('Transaction is not FINALIZED + SUCCESS; observed evidence retained.');

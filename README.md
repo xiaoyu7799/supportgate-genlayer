@@ -2,11 +2,15 @@
 
 Consensus-backed Ubuntu LTS support gates for immutable software release manifests.
 
+**Website:** https://xiaoyu7799.github.io/supportgate-genlayer/
+
+**Source:** https://github.com/xiaoyu7799/supportgate-genlayer
+
 A release engineer can claim an Ubuntu base is supported; a screenshot or CI flag is not independent evidence. SupportGate binds an exact artifact SHA-256, application, environment and Ubuntu codename to a public ticket. GenLayer validators independently fetch Ubuntu's official LTS release feed. Unsupported or unknown codenames cannot receive a release approval. The release transaction fetches the feed again, so an earlier READY decision cannot bypass a later support change.
 
 ## Current deployment
 
-The contract is deployed on Stable Studionet. The deployed source matches `contracts/supportgate.py` byte for byte. Deployment transaction is FINALIZED with successful execution. The positive propose → evaluate → release lifecycle has FINALIZED/SUCCESS receipts and finalized readbacks. Full injected-wallet and public-hosting acceptance remain unverified. No sample records or simulated transactions are presented as chain state.
+The contract is deployed on Stable Studionet. The deployed source matches `contracts/supportgate.py` byte for byte. Deployment transaction is FINALIZED with successful execution. The positive propose → evaluate → release lifecycle has FINALIZED/SUCCESS receipts and finalized readbacks. The GitHub Pages site serves the application and reads real finalized state. Full injected-wallet signing acceptance remains unverified. No sample records or simulated transactions are presented as chain state.
 
 - Contract: `0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812`.
 - Deployment: `0xfa8f6b2083735d278088b97113410ccb01c0d15901574c46e58b1544fc2feb01`.
@@ -61,7 +65,7 @@ For repeated releases, propose a new unique reference for each artifact and envi
 
 ## Deploy and verify
 
-See [deployment instructions](docs/deployment.md), [contract and consensus](docs/architecture.md), and [technical limitations](docs/limitations.md). Deployment and live scripts never generate a replacement signing account or use another network automatically.
+See [recorded verification](docs/verification.md), [deployment instructions](docs/deployment.md), [contract and consensus](docs/architecture.md), and [technical limitations](docs/limitations.md). Deployment and live scripts never generate a replacement signing account or use another network automatically.
 
 ```sh
 npm run schema

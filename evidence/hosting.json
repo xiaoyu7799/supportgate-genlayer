@@ -1,0 +1,36 @@
+{
+  "url": "https://xiaoyu7799.github.io/supportgate-genlayer/",
+  "checkedAt": "2026-11-16T19:49:56.944Z",
+  "resources": [
+    {
+      "path": "",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 540
+    },
+    {
+      "path": "deployment.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 329
+    },
+    {
+      "path": "assets/ccip-ePrVZTQX.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 4630
+    },
+    {
+      "path": "assets/index-D9Ea1SRQ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 570279
+    },
+    {
+      "path": "assets/index-DcISuLDc.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 13189
+    }
+  ]
+}
