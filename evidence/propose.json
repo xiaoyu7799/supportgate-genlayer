@@ -1,0 +1,51 @@
+{
+  "transaction": {
+    "hash": "0xa5c7384f334bfe595980c71996d31f8e4c2645928af621504bc7f12c9e078d58",
+    "from_address": "0xaB46c706e93Dc7c9D4Bfa4955FF562F7510B839F",
+    "to_address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "created_at": "2026-11-16T19:32:15.068806+00:00",
+    "nonce": 1,
+    "consensus_data": {
+      "final": null,
+      "votes": {
+        "0x174A9261a34D502212bE59deB3319508b9ff0fD7": "idle",
+        "0x29e027b307e32d2FB76825aB3cB21bcF79A433Aa": "agree",
+        "0x364A7fb8bf37b1D388c4A81B4b109d91334dC9fd": "agree",
+        "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "idle",
+        "0xE826F4232546894b7F1C6939309f22334de6d68a": "agree"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "gas_used": 0
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "gas_used": 0
+        }
+      ]
+    }
+  },
+  "readback": {
+    "application": "SupportGate source artifact",
+    "artifact_sha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a",
+    "checked_at": 0,
+    "codename": "noble",
+    "created_at": 1794857535,
+    "environment": "staging",
+    "history": [],
+    "id": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f:supportgate-source-1",
+    "owner": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+    "reference": "supportgate-source-1",
+    "revision": 0,
+    "source": null,
+    "state": "PROPOSED",
+    "superseded_by": ""
+  }
+}

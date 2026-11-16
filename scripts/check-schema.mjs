@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createClient} from 'genlayer-js';
+import {studionet} from 'genlayer-js/chains';
+const client=createClient({chain:studionet});
+const chain=await client.request({method:'eth_chainId'});
+if(parseInt(chain,16)!==61999)throw new Error('Wrong chain');
+const code=await readFile('contracts/supportgate.py','utf8');
+const schema=await client.getContractSchemaForCode(code);
+await mkdir('artifacts',{recursive:true});await writeFile('artifacts/schema.json',JSON.stringify(schema,null,2));
+console.log('Stable Studionet schema accepted:',schema);

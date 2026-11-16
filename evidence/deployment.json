@@ -1,0 +1,36 @@
+{
+  "transaction": {
+    "hash": "0xfa8f6b2083735d278088b97113410ccb01c0d15901574c46e58b1544fc2feb01",
+    "from_address": "0xaB46c706e93Dc7c9D4Bfa4955FF562F7510B839F",
+    "to_address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "created_at": "2026-11-16T19:29:15.576937+00:00",
+    "consensus_data": {
+      "final": null,
+      "votes": {
+        "0x0533e32Ae90B9065476eB89C2Bb655eCD98764BD": "agree",
+        "0x5D4dD8d9f034c2fC742A1bE9C6d71D985d4D5Ac4": "agree",
+        "0x7eFf7A59cf5cF0aA88817b5683d3F99caac1D4F9": "agree",
+        "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "agree",
+        "0xf298378Fba762Ebf0cDf0c3dA90C33E730e1CdC3": "agree"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "gas_used": 0
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "gas_used": 0
+        }
+      ]
+    }
+  },
+  "sourceMatches": true,
+  "sourceSha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a"
+}

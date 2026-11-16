@@ -1,0 +1,12 @@
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {read} from '../src/chain.js';
+const [id,path,application,environment]=process.argv.slice(2);
+if(!id||!path||!application||!['staging','production'].includes(environment))throw new Error('Usage: node scripts/check-release.mjs TICKET_ID ARTIFACT_PATH APPLICATION staging|production');
+const config=JSON.parse(await readFile('public/deployment.json','utf8'));
+if(config.chainId!==61999||!config.address)throw new Error('Stable Studionet deployment required');
+const ticket=await read(config.address,'get_ticket',[id]);
+const digest=createHash('sha256').update(await readFile(path)).digest('hex');
+const age=Math.floor(Date.now()/1000)-ticket.checked_at;
+if(ticket.state!=='RELEASED'||ticket.application!==application||ticket.environment!==environment||ticket.artifact_sha256!==digest||!ticket.source?.supported||age<0||age>86400)throw new Error('Release denied: state, digest, application, environment, support or 24-hour freshness check failed.');
+console.log('Release permitted:',id,digest,environment);

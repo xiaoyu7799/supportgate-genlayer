@@ -1,0 +1,85 @@
+{
+  "transaction": {
+    "hash": "0xc278297baf9fa3482e1c643e74ac2cc7a32f9fc8ab9fe8624f8cffef3b2bb6ee",
+    "from_address": "0xaB46c706e93Dc7c9D4Bfa4955FF562F7510B839F",
+    "to_address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "created_at": "2026-11-16T19:34:46.478804+00:00",
+    "nonce": 3,
+    "consensus_data": {
+      "final": null,
+      "votes": {
+        "0x7d74A02562B3C443A6b12FE7996Bc5c9A578554E": "idle",
+        "0xB64c3Fa67e1f33aA1EFc721B7Ac763f2070fCcA3": "agree",
+        "0xCCE41534BAa355c2C268Ebd9EFE4a9D395cd659B": "agree",
+        "0xDc3C84a9Bc42d0b91219c27B00bbbA8CA0F0259A": "agree",
+        "0xc4Ab6B9D74c72EB38D43645318Bb4aFb518a09be": "idle"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "gas_used": 0
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "gas_used": 0
+        }
+      ]
+    }
+  },
+  "readback": {
+    "application": "SupportGate source artifact",
+    "artifact_sha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a",
+    "checked_at": 1794857686,
+    "codename": "noble",
+    "created_at": 1794857535,
+    "environment": "staging",
+    "history": [
+      {
+        "action": "EVALUATE",
+        "actor": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+        "at": 1794857603,
+        "source": {
+          "codename": "noble",
+          "found": true,
+          "name": "Noble Numbat",
+          "source": "https://changelogs.ubuntu.com/meta-release-lts",
+          "supported": true,
+          "version": "24.04.5 LTS"
+        }
+      },
+      {
+        "action": "RELEASE",
+        "actor": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+        "at": 1794857686,
+        "source": {
+          "codename": "noble",
+          "found": true,
+          "name": "Noble Numbat",
+          "source": "https://changelogs.ubuntu.com/meta-release-lts",
+          "supported": true,
+          "version": "24.04.5 LTS"
+        }
+      }
+    ],
+    "id": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f:supportgate-source-1",
+    "owner": "0xab46c706e93dc7c9d4bfa4955ff562f7510b839f",
+    "reference": "supportgate-source-1",
+    "revision": 2,
+    "source": {
+      "codename": "noble",
+      "found": true,
+      "name": "Noble Numbat",
+      "source": "https://changelogs.ubuntu.com/meta-release-lts",
+      "supported": true,
+      "version": "24.04.5 LTS"
+    },
+    "state": "RELEASED",
+    "superseded_by": ""
+  }
+}

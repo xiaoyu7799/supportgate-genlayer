@@ -1,0 +1,23 @@
+{
+  "name": "supportgate-genlayer",
+  "version": "1.0.0",
+  "description": "Consensus-backed Ubuntu LTS support gates for immutable software release manifests.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "python3 -m unittest discover -s tests -v && node --test tests/*.test.js",
+    "schema": "node scripts/check-schema.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "live": "node scripts/live.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "genlayer-js": "1.1.8",
+    "vite": "6.4.1"
+  },
+  "private": true
+}
