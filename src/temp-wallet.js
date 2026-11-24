@@ -50,7 +50,7 @@ export async function createTemporaryWallet(contract){
     require(decoded.functionName==='addTransaction'&&call?.userValue===0n&&call.messageAllocations.length===0
       &&getAddress(call.sender)===address&&getAddress(call.recipient)===getAddress(contract),'Only zero-value SupportGate calls are permitted');
     const fee=BigInt(tx.value||0);
-    require(fee>=0n&&fee<=100000000000000000n,'Testnet fee exceeds the temporary wallet limit');
+    require(fee>=0n&&fee<=250000000000000000n,'Testnet fee exceeds the temporary wallet limit');
     const nonce=Number(BigInt(tx.nonce??await rpc('eth_getTransactionCount',[address,'pending'])));
     const raw=await signer.signTransaction({to:tx.to,data:tx.data,type:'legacy',chainId:61999,nonce,
       value:fee,gas:BigInt(tx.gas),gasPrice:BigInt(tx.gasPrice??await rpc('eth_gasPrice'))});
