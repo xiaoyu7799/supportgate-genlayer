@@ -1,0 +1,34 @@
+{
+  "address": "0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990",
+  "chainId": 61999,
+  "localSource": "contracts/supportgate.py",
+  "deploymentTransaction": "0x39ff7b330211e33b4e8b8ada83368eda26abc5ab23d5ba29a17e6b6e8538b6cd",
+  "deployedSourceSha256": "a2ec3abeb14acaae46f573059cd50ed1f26081e77cd92f3a26303f5f84b198ba",
+  "localSourceSha256": "a2ec3abeb14acaae46f573059cd50ed1f26081e77cd92f3a26303f5f84b198ba",
+  "sourceMatches": true,
+  "sdkDeclaration": "# { \"Depends\": \"py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6\" }",
+  "command": "genvm-lint check <byte-for-byte deployed source> --json",
+  "tool": "genvm-lint, version 0.11.0",
+  "exitCode": 0,
+  "output": {
+    "ok": true,
+    "lint": {
+      "ok": true,
+      "passed": 3
+    },
+    "validate": {
+      "ok": true,
+      "contract": "SupportGate",
+      "methods": 10,
+      "view_methods": 3,
+      "write_methods": 7,
+      "ctor_params": 0,
+      "warnings": [
+        {
+          "code": "I200",
+          "msg": "py-genlayer: a newer runner is available (1zr6nqk597d97kg0dyxg0shhrykx5v02zjgnyrajapy4wlqvfvwh). See https://github.com/genlayerlabs/genvm/releases for changes."
+        }
+      ]
+    }
+  }
+}

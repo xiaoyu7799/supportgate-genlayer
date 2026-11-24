@@ -1,8 +1,9 @@
 {
   "chainId": 61999,
   "rpc": "https://studio.genlayer.com/api",
-  "address": "0x9a274bBdF8deE8867A2Fe3d7c5ac584a60A19812",
-  "deploymentTransaction": "0xfa8f6b2083735d278088b97113410ccb01c0d15901574c46e58b1544fc2feb01",
-  "verified": true,
-  "sourceSha256": "fb210016a0499c693cf1ddf60baac2606f735c58ca2e16b9e61545984c8f4f9a"
+  "sdk": "genlayer-js@2.0.0",
+  "address": "0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990",
+  "transaction": "0x39ff7b330211e33b4e8b8ada83368eda26abc5ab23d5ba29a17e6b6e8538b6cd",
+  "sourceSha256": "a2ec3abeb14acaae46f573059cd50ed1f26081e77cd92f3a26303f5f84b198ba",
+  "source": "contracts/supportgate.py"
 }

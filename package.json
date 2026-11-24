@@ -16,9 +16,9 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "genlayer-js": "1.1.8",
-    "vite": "6.4.1",
-    "viem": "2.57.20"
+    "genlayer-js": "2.0.0",
+    "viem": "2.57.20",
+    "vite": "6.4.1"
   },
   "private": true
 }

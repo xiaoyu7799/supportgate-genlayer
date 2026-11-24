@@ -110,9 +110,40 @@ class SupportGate(gl.Contract):
         return ticket_id
 
     @gl.public.write
+    def propose_oci(self, reference: str, application: str, artifact_sha256: str,
+                    codename: str, environment: str, base_sha256: str, builder: str) -> str:
+        require(len(base_sha256) == 64 and all(c in "0123456789abcdef" for c in base_sha256), "INVALID_BASE_DIGEST")
+        require(base_sha256 != artifact_sha256, "BASE_EQUALS_SUBJECT")
+        owner = str(gl.message.sender_address).lower()
+        require(len(builder) == 42 and builder.startswith("0x") and all(c in "0123456789abcdef" for c in builder[2:])
+                and builder not in [owner, "0x" + "0" * 40], "INVALID_BUILDER")
+        ticket_id = self.propose(reference, application, artifact_sha256, codename, environment)
+        ticket = self._load(ticket_id)
+        ticket["provenance"] = {"base_sha256": base_sha256, "builder": builder, "proof_sha256": "", "attested_at": 0}
+        self._save(ticket)
+        return ticket_id
+
+    @gl.public.write
+    def attest_build(self, ticket_id: str, artifact_sha256: str, base_sha256: str, proof_sha256: str) -> str:
+        ticket = self._load(ticket_id)
+        provenance = ticket.get("provenance")
+        require(provenance is not None and ticket["state"] == "PROPOSED", "ATTESTATION_UNAVAILABLE")
+        actor = str(gl.message.sender_address).lower()
+        require(actor == provenance["builder"], "BUILDER_ONLY")
+        require(not provenance["proof_sha256"], "ALREADY_ATTESTED")
+        require(artifact_sha256 == ticket["artifact_sha256"] and base_sha256 == provenance["base_sha256"], "BUILD_MISMATCH")
+        require(len(proof_sha256) == 64 and all(c in "0123456789abcdef" for c in proof_sha256), "INVALID_PROOF_DIGEST")
+        provenance["proof_sha256"] = proof_sha256
+        provenance["attested_at"] = now()
+        ticket["revision"] += 1
+        self._save(ticket)
+        return pack(ticket)
+
+    @gl.public.write
     def evaluate(self, ticket_id: str) -> str:
         ticket = self._load(ticket_id)
         require(ticket["state"] in ["PROPOSED", "READY", "BLOCKED"], "TERMINAL_STATE")
+        require(not ticket.get("provenance") or ticket["provenance"]["proof_sha256"], "BUILD_ATTESTATION_REQUIRED")
         result = self._check(ticket)
         self._event(ticket, "EVALUATE", result)
         ticket["state"] = "READY" if result["found"] and result["supported"] else "BLOCKED"
@@ -167,4 +198,4 @@ class SupportGate(gl.Contract):
 
     @gl.public.view
     def get_protocol(self) -> str:
-        return pack({"name": "SupportGate", "version": 1, "chain_id": 61999, "source": SOURCE, "policy": "Ubuntu meta-release-lts Supported == 1", "release_rechecks_source": True})
+        return pack({"name": "SupportGate", "version": 2, "chain_id": 61999, "source": SOURCE, "policy": "Ubuntu meta-release-lts Supported == 1", "release_rechecks_source": True, "oci_builder_attestation": True})

@@ -38,6 +38,25 @@ class Tests(unittest.TestCase):
     def propose(self,ref='app-1',code='noble',digest='a'*64):
         return self.c.propose(ref,'Billing API',digest,code,'production')
     def load(self,id):return json.loads(self.c.get_ticket(id))
+    def test_oci_separates_roles_and_binds_build_bytes(self):
+        owner = "0x" + "a" * 40
+        builder = "0x" + "b" * 40
+        ticket = self.c.propose_oci("oci-1", "Billing API", "a"*64, "noble", "production", "b"*64, builder)
+        with self.assertRaisesRegex(ValueError, "BUILD_ATTESTATION_REQUIRED"):
+            self.c.evaluate(ticket)
+        with self.assertRaisesRegex(ValueError, "BUILDER_ONLY"):
+            self.c.attest_build(ticket, "a"*64, "b"*64, "c"*64)
+        host.message.sender_address = builder
+        with self.assertRaisesRegex(ValueError, "BUILD_MISMATCH"):
+            self.c.attest_build(ticket, "d"*64, "b"*64, "c"*64)
+        self.c.attest_build(ticket, "a"*64, "b"*64, "c"*64)
+        with self.assertRaisesRegex(ValueError, "ALREADY_ATTESTED"):
+            self.c.attest_build(ticket, "a"*64, "b"*64, "c"*64)
+        self.c.evaluate(ticket)
+        host.message.sender_address = owner
+        self.c.release(ticket, 2)
+        self.assertEqual(self.load(ticket)["state"], "RELEASED")
+
     def test_full_lifecycle_and_immutable_manifest(self):
         id=self.propose();self.assertEqual(self.load(id)['state'],'PROPOSED')
         self.c.evaluate(id);self.assertEqual(self.load(id)['state'],'READY')
