@@ -1,33 +1,56 @@
-# Contract and consensus
+# Contract and application architecture
 
-The contract stores JSON ticket records in a `TreeMap[str, str]` and a bounded index. Ticket IDs are `lowercase-owner-address:reference`. Manifest fields cannot be edited. There are at most 2,000 tickets globally, 100 per owner and 32 source observations per ticket. Reads are paginated up to 50 entries. A full instance requires deploying a new instance; there is no administrator override or upgrade path.
+## Deployment identity
 
-## State transitions
+- Network: GenLayer Stable Studionet, chain ID 61999.
+- RPC: https://studio.genlayer.com/api
+- Contract: SupportGate, protocol version 2.
+- Current deployed address: 0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990.
+- SDK: genlayer-js 2.0.0.
+- The deployed Python source is compared byte-for-byte with contracts/supportgate.py. Its SHA-256 is recorded in public/deployment.json and evidence/oci/verification.json.
 
-| Current state | Call | Actor | Result |
-| --- | --- | --- | --- |
-| — | propose | Any wallet | PROPOSED |
-| PROPOSED, READY, BLOCKED | evaluate | Any wallet | READY or BLOCKED |
-| READY | release(id, expected_revision) | Proposer | RELEASED or BLOCKED after fresh consensus |
-| PROPOSED, READY, BLOCKED | cancel | Proposer | CANCELLED |
-| RELEASED | supersede(id, replacement_id) | Proposer | SUPERSEDED, preserving replacement pointer |
+The contract retains the original Ubuntu LTS support decision workflow and adds an OCI builder-attestation path. The two proposal methods coexist for compatibility.
 
-CANCELLED and SUPERSEDED are terminal. RELEASED can only be superseded, never modified or cancelled. A replacement must be a different released ticket with the same owner, application and environment, and no earlier creation time. Replacement chains cannot cycle because a superseded ticket cannot be selected as a released replacement.
+## Ubuntu support decision
 
-## Source verification
+The only external source is Ubuntu's official meta-release-lts feed:
 
-The sole URL is hardcoded: `https://changelogs.ubuntu.com/meta-release-lts`. User-controlled URLs are never fetched. The parser rejects non-200 responses, oversized payloads, duplicate keys, duplicate matching codenames, invalid support flags and malformed matching LTS records. Unknown codenames produce a specific negative result. Only `Supported: 1` in a matching LTS block allows a release.
+https://changelogs.ubuntu.com/meta-release-lts
 
-The leader fetches the feed; each validator independently fetches and parses it. `gl.vm.run_nondet_unsafe(fetch, validate)` accepts a `gl.vm.Return` only when canonical JSON of the independently obtained result equals the candidate exactly. Equality includes source URL, codename, found flag, supported flag, version and name. There is no numeric tolerance, model interpretation, provider fallback or leader-only bypass. A source change during consensus can prevent agreement; this is intentional and retryable. No fields are written before consensus returns.
+The contract parses the matching LTS release block and uses its Supported flag. The leader retrieves the source; validators independently retrieve and parse it. gl.vm.run_nondet_unsafe accepts the candidate only when the canonical JSON result exactly matches the independently obtained result. The comparison includes the source URL, codename, found flag, supported flag, version and release name.
 
-At release, the owner and expected revision are checked first. The source is fetched again in that same transaction. If support has ended, the call successfully records BLOCKED and an explicit RELEASE_BLOCKED observation. Infrastructure or consensus failure instead aborts without writing the ticket.
+The source is fetched again during release. A READY observation is not a cached permit: release checks the expected revision and re-evaluates the current source in the same transaction. If the source now denies support, the transaction records BLOCKED rather than releasing.
 
-Observation timestamps use the deterministic transaction context `gl.message_raw['datetime']`, not an LLM or independently fetched clock. Every evaluation increments the revision. Stale release approvals fail before source retrieval. The source result is a historical observation at transaction time, not a permanent assertion of support.
+## Ticket lifecycle
+
+| Call | Authorization | Result |
+| --- | --- | --- |
+| propose | Any wallet | Creates a legacy manifest in PROPOSED |
+| propose_oci | Any wallet | Creates an OCI manifest in PROPOSED with base digest and designated builder |
+| attest_build | Designated builder only; once; while PROPOSED | Stores the proof digest and attestation time; increments revision |
+| evaluate | Any wallet; OCI tickets require an attestation | READY or BLOCKED after GenLayer source consensus |
+| release(id, expected_revision) | Ticket owner; current revision required | RELEASED or BLOCKED after a fresh source check |
+| cancel | Ticket owner | CANCELLED |
+| supersede | Ticket owner | Marks a released ticket SUPERSEDED and links a newer compatible released ticket |
+
+A replacement must have the same owner, application and environment, must itself be RELEASED, and cannot have an earlier creation time. CANCELLED and SUPERSEDED are terminal. A RELEASED ticket cannot be edited or cancelled.
+
+The three read methods are get_ticket, list_tickets and get_protocol. The deployed contract has 10 public methods: 7 writes and 3 views.
+
+## OCI builder provenance
+
+propose_oci records the immutable subject manifest digest, base manifest digest, codename, environment and builder wallet. The builder must be a valid address distinct from the proposal owner.
+
+attest_build is restricted to that designated builder. It accepts one attestation while the ticket is PROPOSED and checks that the supplied subject and base digests match the proposal. The contract stores the proof digest and timestamp; it does not receive or parse the full OCI manifest or proof bytes.
+
+The off-chain verifier in scripts/oci-proof.mjs checks the raw subject manifest digest, the embedded base manifest digest, and that the subject manifest begins with the exact ordered base-layer descriptors. It also calculates the proof digest. scripts/check-oci-release.mjs then checks the finalized on-chain ticket against a trusted policy: chain and contract identity, release state, Ubuntu support result, approval age, release owner, trusted builder, application, environment, exact artifact/base/proof digests and pinned base-to-codename mapping.
+
+The checker is read-only. It returns ALLOW or exits nonzero with a denial reason; it does not publish an image or write to a registry. A consuming CI pipeline must protect its policy and verifier, run the check immediately before promotion, and pass the same immutable image digest to the promotion step.
 
 ## Application
 
-Vite builds a static application. `genlayer-js@1.1.8` uses the `studionet` chain definition and a selected EIP-1193 provider. EIP-6963 discovery and legacy injected providers are supported. Chain 61999 is verified before signing; no value is sent and `leaderOnly` is false.
+The Vite application uses genlayer-js 2.0.0 and the Stable Studionet chain definition. It discovers injected wallets through EIP-6963 and legacy provider injection, verifies chain 61999 before signing, and supports an optional disposable EIP-1193 Studionet signer.
 
-`src/chain.js` polls the real transaction. FINALIZED alone is insufficient: successful execution must also be present. The app then fetches the affected ticket using `TransactionHashVariant.LATEST_FINAL`. UI success is based on that readback. Records and source flags are never synthesized locally. Session storage contains only a pending transaction hash, ticket ID and contract address; it is not a business-state database.
+The application polls the real transaction until FINALIZED and requires successful execution. It then reads the affected ticket with TransactionHashVariant.LATEST_FINAL. UI state is based on that finalized readback, not on a submitted transaction or a local mock.
 
-A CI consumer hashes the actual local artifact and checks the exact finalized release record, including a 24-hour freshness bound. Teams must separately prove base-image provenance. SupportGate records an approval, not execution of deployment or runtime safety.
+The optional browser signer uses a real secp256k1 key and Studio faucet funding. Its private key remains in the current tab's memory and is not exported or stored in browser persistence. This demonstrates the provider connection and signing path; it does not certify the individual interfaces of every third-party wallet.
