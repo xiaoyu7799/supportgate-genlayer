@@ -1,0 +1,12 @@
+{
+  "chainId": 61999,
+  "contract": "0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990",
+  "releaseOwner": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+  "trustedBuilder": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+  "application": "Billing API",
+  "environment": "production",
+  "ubuntuBases": {
+    "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a": "noble",
+    "b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9": "jammy"
+  }
+}

@@ -23,7 +23,7 @@ const [manifest,proof,oldManifest,policy]=await Promise.all([
 ]);
 const ticket=log.snapshots['billing-rc2'];
 assert.equal(policy.contract,log.address);
-checkApproval(ticket,checkProof(manifest,proof),policy);
+checkApproval(ticket,checkProof(manifest,proof),policy,ticket.checked_at);
 assert.throws(()=>checkProof(oldManifest,proof),/subject manifest digest differs/);
 const oldProof=await readFile(dir+'billing-rc1/proof.json');
 assert.throws(()=>checkApproval(log.snapshots['billing-rc1'],checkProof(oldManifest,oldProof),policy),/approval missing/);

@@ -1,0 +1,64 @@
+{
+  "site": "https://xiaoyu7799.github.io/supportgate-genlayer/",
+  "transaction": {
+    "hash": "0x36eac1925f2ed1170aa7747a46886507cb9e1bd18111232e5877902efcc89d4f",
+    "from_address": "0x20909Bc85cAAB4F03543292d4A5f0885547a7826",
+    "to_address": "0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990",
+    "status": 7,
+    "statusName": "FINALIZED",
+    "txExecutionResultName": "FINISHED_WITH_RETURN",
+    "created_at": "2026-11-24T08:01:19.288808+00:00",
+    "consensus_data": {
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "idle",
+        "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+        "0x23A15A452F19D1B616276fedC5B8B51d69082959": "agree",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree"
+      },
+      "leader_receipt": [
+        {
+          "execution_result": "SUCCESS",
+          "vote": null,
+          "mode": "leader",
+          "result": {
+            "status": "return",
+            "readable": "\"0x20909bc85caab4f03543292d4a5f0885547a7826:browser-control-check\""
+          }
+        },
+        {
+          "execution_result": "SUCCESS",
+          "vote": "agree",
+          "mode": "validator",
+          "result": {
+            "status": "return",
+            "readable": "\"0x20909bc85caab4f03543292d4a5f0885547a7826:browser-control-check\""
+          }
+        }
+      ]
+    },
+    "call": "{\"\":\"propose_oci\"\"args\":[\"browser-control-check\",\"Control Room Check\",\"67827963f608a45b6eb582995a9fea4df4b51a38a1927c025fbbcda7741ae08f\",\"noble\",\"staging\",\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\",\"0xa52c86c17a39100902486ef0556e8b305303bd08\",]}"
+  },
+  "state": {
+    "application": "Control Room Check",
+    "artifact_sha256": "67827963f608a45b6eb582995a9fea4df4b51a38a1927c025fbbcda7741ae08f",
+    "checked_at": 0,
+    "codename": "noble",
+    "created_at": 1795507279,
+    "environment": "staging",
+    "history": [],
+    "id": "0x20909bc85caab4f03543292d4a5f0885547a7826:browser-control-check",
+    "owner": "0x20909bc85caab4f03543292d4a5f0885547a7826",
+    "provenance": {
+      "attested_at": 0,
+      "base_sha256": "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+      "builder": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+      "proof_sha256": ""
+    },
+    "reference": "browser-control-check",
+    "revision": 0,
+    "source": null,
+    "state": "PROPOSED",
+    "superseded_by": ""
+  }
+}

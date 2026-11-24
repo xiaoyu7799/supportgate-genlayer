@@ -49,8 +49,12 @@ The build tests are local. [Deployed source lint](evidence/oci/lint-deployed.jso
 [finalized receipts and readbacks](evidence/oci/verification.json) and
 [transaction journal](evidence/oci/live.json) are independently reproducible
 against Stable Studionet. [Deployment configuration](public/deployment.json)
-records the exact contract source SHA-256. All study images and evidence use
-public inputs. The demo tickets are test releases.
+records the exact contract source SHA-256.
+
+The [browser proposal](evidence/oci/browser-proposal.json) demonstrates real signing
+and finalized readback from the hosted app. The [gate runs](evidence/oci/gate-runs.json)
+record the CLI exit codes for the approved image, a substituted image and the superseded ticket.
+The demo tickets use public inputs and represent test releases.
 
 The [initial accepted version](https://github.com/xiaoyu7799/supportgate-genlayer/tree/124ba91c1ff122bd86e00795d445cc1407afe973)
 has its own contract and receipts. The earlier evidence under `evidence/`

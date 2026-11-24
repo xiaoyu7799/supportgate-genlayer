@@ -69,3 +69,5 @@ form{display:grid;gap:11px}label{display:grid;gap:5px;font-size:12px;font-weight
 /* Keep the upper plate below the instrument line throughout the full slider range. */
 .stack{transform:translate(12%,calc(23% + var(--gap) * .35)) rotateX(calc(58deg + var(--tilt))) rotateZ(calc(-39deg + var(--twist)))}
 @media(max-width:755px){.stack{transform:translate(12%,calc(17% + var(--gap) * .18)) scale(.75) rotateX(58deg) rotateZ(-39deg)}}
+@media(min-width:756px){.stack{transform:translate(12%,calc(19% + var(--gap) * .33)) scale3d(.91,.91,.91) rotateX(calc(58deg + var(--tilt))) rotateZ(calc(-39deg + var(--twist)))}}
+.viewport::before{content:"";position:absolute;left:56%;top:15%;bottom:11%;border-left:1px dashed #b5584280;pointer-events:none}

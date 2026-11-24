@@ -1,0 +1,769 @@
+{
+  "verifiedAt": "2026-11-24T08:04:45.874Z",
+  "chainId": 61999,
+  "address": "0xD252920A2995Af73aD1cbA2c38AfbcE5C01C5990",
+  "sourceSha256": "a2ec3abeb14acaae46f573059cd50ed1f26081e77cd92f3a26303f5f84b198ba",
+  "sourceMatches": true,
+  "transactions": [
+    {
+      "tag": "deploy",
+      "hash": "0x39ff7b330211e33b4e8b8ada83368eda26abc5ab23d5ba29a17e6b6e8538b6cd",
+      "function": "deploy",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "null"
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "idle",
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "idle",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc1/propose",
+      "hash": "0x0c44e45df8443bcc5a286454f85d74ffe0a0eb0b221f0b7c512d58fa052ac098",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree"
+      }
+    },
+    {
+      "tag": "indexer/propose",
+      "hash": "0xf85f298494eb8f3f6f043070d708bc0acf65d0e2e41718d7162587b977ac3aef",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0xa52c86c17a39100902486ef0556e8b305303bd08:indexer\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x19a02f95418A6c76091CDA37C4fc542CA82805c9": "agree",
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "agree",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+        "0xee46B9Dc4c860149B1d140840284e5374854e746": "idle"
+      }
+    },
+    {
+      "tag": "retired/propose",
+      "hash": "0x3cd9f5b095dcc694b14d5b23697791be271c6fe09d15ed9fa943ff203052c452",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0x9391e9bd3419746a62be9d975c100649a0b03969:retired\""
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0xee46B9Dc4c860149B1d140840284e5374854e746": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc2/propose",
+      "hash": "0x5e8b343b87a715f684201bb0da0fa6f071b0cfdf4deefb33ef7601fdb053bc9e",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree"
+      }
+    },
+    {
+      "tag": "withdrawn/propose",
+      "hash": "0x05104e8284ac1fe54457af00139c365ef73a3b11b7beeac66344c6cf33059327",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0x9391e9bd3419746a62be9d975c100649a0b03969:withdrawn\""
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x19a02f95418A6c76091CDA37C4fc542CA82805c9": "agree",
+        "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0xe358f855C96d8E7243836cf986eb037175B9467e": "agree"
+      }
+    },
+    {
+      "tag": "unattested/propose",
+      "hash": "0x52ba04d8ebe56a0caa7e7edcf95b6cf38c3c28385410d930fbfb6206f370465c",
+      "function": "propose_oci",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"0xa52c86c17a39100902486ef0556e8b305303bd08:unattested\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "idle",
+        "0x6DC61b906F74F44612c5545b0b79486133B3556d": "idle",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc1/attest",
+      "hash": "0xdac265e124424542501d08e0541ad6079f9bb69b2751edfd2592002c87a05c8c",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"d4723e42a04a6aaa8ece94755c0a9f741e9cdbac5483101583e1e6784f7966b4\\\",\\\"checked_at\\\":0,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506674,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506845,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"a561252b7eac4ddb8dce04048363edf00963916b3cfd44ed6e3364b22ea26d9e\\\"},\\\"reference\\\":\\\"billing-rc1\\\",\\\"revision\\\":1,\\\"source\\\":null,\\\"state\\\":\\\"PROPOSED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "idle"
+      }
+    },
+    {
+      "tag": "indexer/attest",
+      "hash": "0x2b39d54c0d8fb0cfecdb6a7789f5d09f28ebe1a27ad618aa3f3aac5beec4fb25",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Search Indexer\\\",\\\"artifact_sha256\\\":\\\"7c9056cd575615416d28f70d2e8982b673fe99da06b282eb58d1a0895f5cfb0f\\\",\\\"checked_at\\\":0,\\\"codename\\\":\\\"jammy\\\",\\\"created_at\\\":1795506678,\\\"environment\\\":\\\"staging\\\",\\\"history\\\":[],\\\"id\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08:indexer\\\",\\\"owner\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506849,\\\"base_sha256\\\":\\\"b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9\\\",\\\"builder\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"proof_sha256\\\":\\\"33aae5f4e3019ac3e33c5db84fefdde2821fe3e73e9ca68174f588c0a8f0a0de\\\"},\\\"reference\\\":\\\"indexer\\\",\\\"revision\\\":1,\\\"source\\\":null,\\\"state\\\":\\\"PROPOSED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "idle",
+        "0xee46B9Dc4c860149B1d140840284e5374854e746": "idle"
+      }
+    },
+    {
+      "tag": "retired/attest",
+      "hash": "0xd6ff7599e257708e8262e2ff210ea62d632cd678b837676afc3f718df9767a81",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Legacy Worker\\\",\\\"artifact_sha256\\\":\\\"d541c542b3c68cb04a9f8ce48e2b8e708df07796ff5998af61a7acf2c8c2d9f0\\\",\\\"checked_at\\\":0,\\\"codename\\\":\\\"dapper\\\",\\\"created_at\\\":1795506678,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[],\\\"id\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969:retired\\\",\\\"owner\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506849,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"proof_sha256\\\":\\\"17c2b7b1debf5ba92944b13e7c7b0de29480a8fc3ebdd599831a5a54af6a0f7c\\\"},\\\"reference\\\":\\\"retired\\\",\\\"revision\\\":1,\\\"source\\\":null,\\\"state\\\":\\\"PROPOSED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "idle",
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc1/evaluate",
+      "hash": "0x62f4c17b3a5993d2ec1de408a50cdfe17b85c42ad77d4e30bdddac8bc4f2315d",
+      "function": "evaluate",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"d4723e42a04a6aaa8ece94755c0a9f741e9cdbac5483101583e1e6784f7966b4\\\",\\\"checked_at\\\":1795506930,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506674,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}}],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506845,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"a561252b7eac4ddb8dce04048363edf00963916b3cfd44ed6e3364b22ea26d9e\\\"},\\\"reference\\\":\\\"billing-rc1\\\",\\\"revision\\\":2,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"},\\\"state\\\":\\\"READY\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x19a02f95418A6c76091CDA37C4fc542CA82805c9": "agree",
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "agree",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree"
+      }
+    },
+    {
+      "tag": "indexer/evaluate",
+      "hash": "0x4572a3dd6679ddab6e9fcc833e2ff07a3b7ec1896db731c96b5b784424ce018a",
+      "function": "evaluate",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Search Indexer\\\",\\\"artifact_sha256\\\":\\\"7c9056cd575615416d28f70d2e8982b673fe99da06b282eb58d1a0895f5cfb0f\\\",\\\"checked_at\\\":1795506930,\\\"codename\\\":\\\"jammy\\\",\\\"created_at\\\":1795506678,\\\"environment\\\":\\\"staging\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"jammy\\\",\\\"found\\\":true,\\\"name\\\":\\\"Jammy Jellyfish\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"22.04.5 LTS\\\"}}],\\\"id\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08:indexer\\\",\\\"owner\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506849,\\\"base_sha256\\\":\\\"b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9\\\",\\\"builder\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"proof_sha256\\\":\\\"33aae5f4e3019ac3e33c5db84fefdde2821fe3e73e9ca68174f588c0a8f0a0de\\\"},\\\"reference\\\":\\\"indexer\\\",\\\"revision\\\":2,\\\"source\\\":{\\\"codename\\\":\\\"jammy\\\",\\\"found\\\":true,\\\"name\\\":\\\"Jammy Jellyfish\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"22.04.5 LTS\\\"},\\\"state\\\":\\\"READY\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+        "0x23A15A452F19D1B616276fedC5B8B51d69082959": "idle",
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+      }
+    },
+    {
+      "tag": "retired/evaluate",
+      "hash": "0x54dac49d0c0989e234885fe8aa7b0bf9853ae13acb87b210a78cf89088e0f2d1",
+      "function": "evaluate",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Legacy Worker\\\",\\\"artifact_sha256\\\":\\\"d541c542b3c68cb04a9f8ce48e2b8e708df07796ff5998af61a7acf2c8c2d9f0\\\",\\\"checked_at\\\":1795506930,\\\"codename\\\":\\\"dapper\\\",\\\"created_at\\\":1795506678,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"dapper\\\",\\\"found\\\":true,\\\"name\\\":\\\"Dapper Drake\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":false,\\\"version\\\":\\\"6.06 LTS\\\"}}],\\\"id\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969:retired\\\",\\\"owner\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506849,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"proof_sha256\\\":\\\"17c2b7b1debf5ba92944b13e7c7b0de29480a8fc3ebdd599831a5a54af6a0f7c\\\"},\\\"reference\\\":\\\"retired\\\",\\\"revision\\\":2,\\\"source\\\":{\\\"codename\\\":\\\"dapper\\\",\\\"found\\\":true,\\\"name\\\":\\\"Dapper Drake\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":false,\\\"version\\\":\\\"6.06 LTS\\\"},\\\"state\\\":\\\"BLOCKED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0x6DC61b906F74F44612c5545b0b79486133B3556d": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "idle",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc1/release",
+      "hash": "0xe3f62cb93422be4cbbbc389b7ba4a8e2c75220997da3a5fddeb930268a9c2f87",
+      "function": "release",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"d4723e42a04a6aaa8ece94755c0a9f741e9cdbac5483101583e1e6784f7966b4\\\",\\\"checked_at\\\":1795507032,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506674,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}},{\\\"action\\\":\\\"RELEASE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795507032,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}}],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506845,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"a561252b7eac4ddb8dce04048363edf00963916b3cfd44ed6e3364b22ea26d9e\\\"},\\\"reference\\\":\\\"billing-rc1\\\",\\\"revision\\\":3,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"},\\\"state\\\":\\\"RELEASED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "idle",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+      }
+    },
+    {
+      "tag": "withdrawn/cancel",
+      "hash": "0xe413676cb585508a203dca284ff117dd8cf3bec13e259189b0cc9f2c1d9c5442",
+      "function": "cancel",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Batch Scheduler\\\",\\\"artifact_sha256\\\":\\\"41ae7743b31034e69108646863804a7980b0b1dd0df8ab614397ff91204fc790\\\",\\\"checked_at\\\":0,\\\"codename\\\":\\\"jammy\\\",\\\"created_at\\\":1795506767,\\\"environment\\\":\\\"staging\\\",\\\"history\\\":[],\\\"id\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969:withdrawn\\\",\\\"owner\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"provenance\\\":{\\\"attested_at\\\":0,\\\"base_sha256\\\":\\\"b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9\\\",\\\"builder\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"proof_sha256\\\":\\\"\\\"},\\\"reference\\\":\\\"withdrawn\\\",\\\"revision\\\":1,\\\"source\\\":null,\\\"state\\\":\\\"CANCELLED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "agree",
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x6DC61b906F74F44612c5545b0b79486133B3556d": "idle"
+      }
+    },
+    {
+      "tag": "indexer/release",
+      "hash": "0xf68677b6475ae329cd7a1b79bdf3e27ca16b8d415140edf1b577b48aa01a3184",
+      "function": "release",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Search Indexer\\\",\\\"artifact_sha256\\\":\\\"7c9056cd575615416d28f70d2e8982b673fe99da06b282eb58d1a0895f5cfb0f\\\",\\\"checked_at\\\":1795507037,\\\"codename\\\":\\\"jammy\\\",\\\"created_at\\\":1795506678,\\\"environment\\\":\\\"staging\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"jammy\\\",\\\"found\\\":true,\\\"name\\\":\\\"Jammy Jellyfish\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"22.04.5 LTS\\\"}},{\\\"action\\\":\\\"RELEASE\\\",\\\"actor\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"at\\\":1795507037,\\\"source\\\":{\\\"codename\\\":\\\"jammy\\\",\\\"found\\\":true,\\\"name\\\":\\\"Jammy Jellyfish\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"22.04.5 LTS\\\"}}],\\\"id\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08:indexer\\\",\\\"owner\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506849,\\\"base_sha256\\\":\\\"b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9\\\",\\\"builder\\\":\\\"0x9391e9bd3419746a62be9d975c100649a0b03969\\\",\\\"proof_sha256\\\":\\\"33aae5f4e3019ac3e33c5db84fefdde2821fe3e73e9ca68174f588c0a8f0a0de\\\"},\\\"reference\\\":\\\"indexer\\\",\\\"revision\\\":3,\\\"source\\\":{\\\"codename\\\":\\\"jammy\\\",\\\"found\\\":true,\\\"name\\\":\\\"Jammy Jellyfish\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"22.04.5 LTS\\\"},\\\"state\\\":\\\"RELEASED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xee46B9Dc4c860149B1d140840284e5374854e746": "idle"
+      }
+    },
+    {
+      "tag": "unattested/reject-owner",
+      "hash": "0x4482046cc1d1c77cda08246f749b1df8415902699e34208c64952cfa2ccecaf0",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": {
+        "status": "contract_error",
+        "payload": "exit_code 1"
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "contractError": "BUILDER_ONLY",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x23A15A452F19D1B616276fedC5B8B51d69082959": "agree",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "idle",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "idle"
+      }
+    },
+    {
+      "tag": "retired/reject-release",
+      "hash": "0x31b981e5fa48388cd07444a402634111f844f793622cd0849b6ca0714247ffb2",
+      "function": "release",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": {
+        "status": "contract_error",
+        "payload": "exit_code 1"
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "contractError": "NOT_READY",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x6DC61b906F74F44612c5545b0b79486133B3556d": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xe358f855C96d8E7243836cf986eb037175B9467e": "idle"
+      }
+    },
+    {
+      "tag": "billing-rc2/attest",
+      "hash": "0x23246a7a7810a2871883e1ad0bf62ea3896a5d46962da5e87c79c9bc1ea4562d",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"37f2fb3a6da7045fa634c984bbd6cc252b345a85de73bc1517391202cf6732dc\\\",\\\"checked_at\\\":0,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506763,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795507202,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"9f8bc29b0ba1e70791087d4bb7b31c011feb50e69fb4cb177cbdc35b5350ef37\\\"},\\\"reference\\\":\\\"billing-rc2\\\",\\\"revision\\\":1,\\\"source\\\":null,\\\"state\\\":\\\"PROPOSED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "idle",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "idle"
+      }
+    },
+    {
+      "tag": "billing-rc2/evaluate",
+      "hash": "0x99f41649e3eebeed71b88bc42603053b0b1776aa70f9589b237cf69c89ca3011",
+      "function": "evaluate",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"37f2fb3a6da7045fa634c984bbd6cc252b345a85de73bc1517391202cf6732dc\\\",\\\"checked_at\\\":1795507255,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506763,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795507255,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}}],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795507202,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"9f8bc29b0ba1e70791087d4bb7b31c011feb50e69fb4cb177cbdc35b5350ef37\\\"},\\\"reference\\\":\\\"billing-rc2\\\",\\\"revision\\\":2,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"},\\\"state\\\":\\\"READY\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x23A15A452F19D1B616276fedC5B8B51d69082959": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "idle"
+      }
+    },
+    {
+      "tag": "unattested/evaluate",
+      "hash": "0xf50f26d14d1c22db422f79221bf4ff314be6e42286b219032019acc8daa1b255",
+      "function": "evaluate",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": {
+        "status": "contract_error",
+        "payload": "exit_code 1"
+      },
+      "actor": "0xA52c86C17a39100902486EF0556e8B305303Bd08",
+      "contractError": "BUILD_ATTESTATION_REQUIRED",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "idle",
+        "0xe358f855C96d8E7243836cf986eb037175B9467e": "agree"
+      }
+    },
+    {
+      "tag": "unattested/reject-subject",
+      "hash": "0x6b636b199f9b91e6a18bde17b0353344f442be82a6d671b7d2ac99d51ccabe06",
+      "function": "attest_build",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": {
+        "status": "contract_error",
+        "payload": "exit_code 1"
+      },
+      "actor": "0x9391E9bd3419746a62be9D975c100649A0B03969",
+      "contractError": "BUILD_MISMATCH",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "idle",
+        "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc2/release",
+      "hash": "0x6a46491e1e801e5b871ab6bdc1e559eb5d2cf15bdc6463de51337904f602ad1d",
+      "function": "release",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"37f2fb3a6da7045fa634c984bbd6cc252b345a85de73bc1517391202cf6732dc\\\",\\\"checked_at\\\":1795507320,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506763,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795507255,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}},{\\\"action\\\":\\\"RELEASE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795507320,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}}],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795507202,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"9f8bc29b0ba1e70791087d4bb7b31c011feb50e69fb4cb177cbdc35b5350ef37\\\"},\\\"reference\\\":\\\"billing-rc2\\\",\\\"revision\\\":3,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"},\\\"state\\\":\\\"RELEASED\\\",\\\"superseded_by\\\":\\\"\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [
+        "0"
+      ],
+      "votes": {
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "idle",
+        "0x23A15A452F19D1B616276fedC5B8B51d69082959": "idle",
+        "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree"
+      }
+    },
+    {
+      "tag": "billing-rc1/supersede",
+      "hash": "0xb75c714f921700190c4fd096736e6981d93d22860d20fed3aae1d7986ffbcce6",
+      "function": "supersede",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "readable": "\"{\\\"application\\\":\\\"Billing API\\\",\\\"artifact_sha256\\\":\\\"d4723e42a04a6aaa8ece94755c0a9f741e9cdbac5483101583e1e6784f7966b4\\\",\\\"checked_at\\\":1795507032,\\\"codename\\\":\\\"noble\\\",\\\"created_at\\\":1795506674,\\\"environment\\\":\\\"production\\\",\\\"history\\\":[{\\\"action\\\":\\\"EVALUATE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795506930,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}},{\\\"action\\\":\\\"RELEASE\\\",\\\"actor\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"at\\\":1795507032,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"}}],\\\"id\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1\\\",\\\"owner\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3\\\",\\\"provenance\\\":{\\\"attested_at\\\":1795506845,\\\"base_sha256\\\":\\\"9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a\\\",\\\"builder\\\":\\\"0xa52c86c17a39100902486ef0556e8b305303bd08\\\",\\\"proof_sha256\\\":\\\"a561252b7eac4ddb8dce04048363edf00963916b3cfd44ed6e3364b22ea26d9e\\\"},\\\"reference\\\":\\\"billing-rc1\\\",\\\"revision\\\":4,\\\"source\\\":{\\\"codename\\\":\\\"noble\\\",\\\"found\\\":true,\\\"name\\\":\\\"Noble Numbat\\\",\\\"source\\\":\\\"https://changelogs.ubuntu.com/meta-release-lts\\\",\\\"supported\\\":true,\\\"version\\\":\\\"24.04.5 LTS\\\"},\\\"state\\\":\\\"SUPERSEDED\\\",\\\"superseded_by\\\":\\\"0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2\\\"}\""
+      },
+      "actor": "0x97Cc2f8FE12de8d3ac1833c5926005d9a8507Aa3",
+      "equivalenceOutputs": [],
+      "votes": {
+        "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "agree",
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+        "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+        "0x6DC61b906F74F44612c5545b0b79486133B3556d": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "idle"
+      }
+    }
+  ],
+  "records": [
+    {
+      "application": "Billing API",
+      "artifact_sha256": "d4723e42a04a6aaa8ece94755c0a9f741e9cdbac5483101583e1e6784f7966b4",
+      "checked_at": 1795507032,
+      "codename": "noble",
+      "created_at": 1795506674,
+      "environment": "production",
+      "history": [
+        {
+          "action": "EVALUATE",
+          "actor": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+          "at": 1795506930,
+          "source": {
+            "codename": "noble",
+            "found": true,
+            "name": "Noble Numbat",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "24.04.5 LTS"
+          }
+        },
+        {
+          "action": "RELEASE",
+          "actor": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+          "at": 1795507032,
+          "source": {
+            "codename": "noble",
+            "found": true,
+            "name": "Noble Numbat",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "24.04.5 LTS"
+          }
+        }
+      ],
+      "id": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc1",
+      "owner": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+      "provenance": {
+        "attested_at": 1795506845,
+        "base_sha256": "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+        "builder": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+        "proof_sha256": "a561252b7eac4ddb8dce04048363edf00963916b3cfd44ed6e3364b22ea26d9e"
+      },
+      "reference": "billing-rc1",
+      "revision": 4,
+      "source": {
+        "codename": "noble",
+        "found": true,
+        "name": "Noble Numbat",
+        "source": "https://changelogs.ubuntu.com/meta-release-lts",
+        "supported": true,
+        "version": "24.04.5 LTS"
+      },
+      "state": "SUPERSEDED",
+      "superseded_by": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2"
+    },
+    {
+      "application": "Billing API",
+      "artifact_sha256": "37f2fb3a6da7045fa634c984bbd6cc252b345a85de73bc1517391202cf6732dc",
+      "checked_at": 1795507320,
+      "codename": "noble",
+      "created_at": 1795506763,
+      "environment": "production",
+      "history": [
+        {
+          "action": "EVALUATE",
+          "actor": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+          "at": 1795507255,
+          "source": {
+            "codename": "noble",
+            "found": true,
+            "name": "Noble Numbat",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "24.04.5 LTS"
+          }
+        },
+        {
+          "action": "RELEASE",
+          "actor": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+          "at": 1795507320,
+          "source": {
+            "codename": "noble",
+            "found": true,
+            "name": "Noble Numbat",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "24.04.5 LTS"
+          }
+        }
+      ],
+      "id": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2",
+      "owner": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+      "provenance": {
+        "attested_at": 1795507202,
+        "base_sha256": "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+        "builder": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+        "proof_sha256": "9f8bc29b0ba1e70791087d4bb7b31c011feb50e69fb4cb177cbdc35b5350ef37"
+      },
+      "reference": "billing-rc2",
+      "revision": 3,
+      "source": {
+        "codename": "noble",
+        "found": true,
+        "name": "Noble Numbat",
+        "source": "https://changelogs.ubuntu.com/meta-release-lts",
+        "supported": true,
+        "version": "24.04.5 LTS"
+      },
+      "state": "RELEASED",
+      "superseded_by": ""
+    },
+    {
+      "application": "Search Indexer",
+      "artifact_sha256": "7c9056cd575615416d28f70d2e8982b673fe99da06b282eb58d1a0895f5cfb0f",
+      "checked_at": 1795507037,
+      "codename": "jammy",
+      "created_at": 1795506678,
+      "environment": "staging",
+      "history": [
+        {
+          "action": "EVALUATE",
+          "actor": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+          "at": 1795506930,
+          "source": {
+            "codename": "jammy",
+            "found": true,
+            "name": "Jammy Jellyfish",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "22.04.5 LTS"
+          }
+        },
+        {
+          "action": "RELEASE",
+          "actor": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+          "at": 1795507037,
+          "source": {
+            "codename": "jammy",
+            "found": true,
+            "name": "Jammy Jellyfish",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": true,
+            "version": "22.04.5 LTS"
+          }
+        }
+      ],
+      "id": "0xa52c86c17a39100902486ef0556e8b305303bd08:indexer",
+      "owner": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+      "provenance": {
+        "attested_at": 1795506849,
+        "base_sha256": "b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9",
+        "builder": "0x9391e9bd3419746a62be9d975c100649a0b03969",
+        "proof_sha256": "33aae5f4e3019ac3e33c5db84fefdde2821fe3e73e9ca68174f588c0a8f0a0de"
+      },
+      "reference": "indexer",
+      "revision": 3,
+      "source": {
+        "codename": "jammy",
+        "found": true,
+        "name": "Jammy Jellyfish",
+        "source": "https://changelogs.ubuntu.com/meta-release-lts",
+        "supported": true,
+        "version": "22.04.5 LTS"
+      },
+      "state": "RELEASED",
+      "superseded_by": ""
+    },
+    {
+      "application": "Legacy Worker",
+      "artifact_sha256": "d541c542b3c68cb04a9f8ce48e2b8e708df07796ff5998af61a7acf2c8c2d9f0",
+      "checked_at": 1795506930,
+      "codename": "dapper",
+      "created_at": 1795506678,
+      "environment": "production",
+      "history": [
+        {
+          "action": "EVALUATE",
+          "actor": "0x9391e9bd3419746a62be9d975c100649a0b03969",
+          "at": 1795506930,
+          "source": {
+            "codename": "dapper",
+            "found": true,
+            "name": "Dapper Drake",
+            "source": "https://changelogs.ubuntu.com/meta-release-lts",
+            "supported": false,
+            "version": "6.06 LTS"
+          }
+        }
+      ],
+      "id": "0x9391e9bd3419746a62be9d975c100649a0b03969:retired",
+      "owner": "0x9391e9bd3419746a62be9d975c100649a0b03969",
+      "provenance": {
+        "attested_at": 1795506849,
+        "base_sha256": "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+        "builder": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+        "proof_sha256": "17c2b7b1debf5ba92944b13e7c7b0de29480a8fc3ebdd599831a5a54af6a0f7c"
+      },
+      "reference": "retired",
+      "revision": 2,
+      "source": {
+        "codename": "dapper",
+        "found": true,
+        "name": "Dapper Drake",
+        "source": "https://changelogs.ubuntu.com/meta-release-lts",
+        "supported": false,
+        "version": "6.06 LTS"
+      },
+      "state": "BLOCKED",
+      "superseded_by": ""
+    },
+    {
+      "application": "Metrics Exporter",
+      "artifact_sha256": "67827963f608a45b6eb582995a9fea4df4b51a38a1927c025fbbcda7741ae08f",
+      "checked_at": 0,
+      "codename": "noble",
+      "created_at": 1795506767,
+      "environment": "staging",
+      "history": [],
+      "id": "0xa52c86c17a39100902486ef0556e8b305303bd08:unattested",
+      "owner": "0xa52c86c17a39100902486ef0556e8b305303bd08",
+      "provenance": {
+        "attested_at": 0,
+        "base_sha256": "9a04f13b3f80ef056361e30868593b1cfd2279fe19e4081cb93a90bf56819d6a",
+        "builder": "0x9391e9bd3419746a62be9d975c100649a0b03969",
+        "proof_sha256": ""
+      },
+      "reference": "unattested",
+      "revision": 0,
+      "source": null,
+      "state": "PROPOSED",
+      "superseded_by": ""
+    },
+    {
+      "application": "Batch Scheduler",
+      "artifact_sha256": "41ae7743b31034e69108646863804a7980b0b1dd0df8ab614397ff91204fc790",
+      "checked_at": 0,
+      "codename": "jammy",
+      "created_at": 1795506767,
+      "environment": "staging",
+      "history": [],
+      "id": "0x9391e9bd3419746a62be9d975c100649a0b03969:withdrawn",
+      "owner": "0x9391e9bd3419746a62be9d975c100649a0b03969",
+      "provenance": {
+        "attested_at": 0,
+        "base_sha256": "b682e31336cc8e0a73ed91ab32b7a95e32591c5ff09994490a20accf9b3600f9",
+        "builder": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3",
+        "proof_sha256": ""
+      },
+      "reference": "withdrawn",
+      "revision": 1,
+      "source": null,
+      "state": "CANCELLED",
+      "superseded_by": ""
+    }
+  ],
+  "gate": {
+    "approved": "0x97cc2f8fe12de8d3ac1833c5926005d9a8507aa3:billing-rc2",
+    "substitutedImage": "DENIED",
+    "supersededTicket": "DENIED"
+  }
+}

@@ -18,9 +18,16 @@ export function success(tx) {
 export function failure(tx) {
  return ['ERROR', 'FAILURE'].includes(leaderReceipt(tx)?.execution_result);
 }
+function resultSummary(result) {
+ if (!result) return undefined;
+ const summary = {status:result.status};
+ if (typeof result.payload === 'string') summary.payload = result.payload;
+ else if (result.payload?.readable !== undefined) summary.readable = result.payload.readable;
+ return summary;
+}
 export function slim(tx){
  const keys=['hash','from_address','to_address','status','statusName','resultName','txExecutionResultName','created_at','nonce','value'];const out=Object.fromEntries(keys.filter(k=>k in tx).map(k=>[k,tx[k]]));
- const c=tx.consensus_data||{};out.consensus_data={final:c.final,votes:c.votes,leader_receipt:(c.leader_receipt||[]).map(r=>Object.fromEntries(['execution_result','error','vote','mode','result'].filter(k=>k in r).map(k=>[k,r[k]])))};
+ const c=tx.consensus_data||{};out.consensus_data={final:c.final,votes:c.votes,leader_receipt:(c.leader_receipt||[]).map(r=>Object.fromEntries(['execution_result','error','vote','mode','result'].filter(k=>k in r).map(k=>[k,k==='result'?resultSummary(r[k]):r[k]])))};
  if(tx.data?.calldata?.readable)out.call=tx.data.calldata.readable;
  return out;
 }
@@ -80,7 +87,7 @@ export async function verifyRun(){
    assert(Object.values(tx.consensus_data.votes).filter(v => v === 'agree').length >= 2, tag);
   }
   return {tag, hash:entry.hash, function:entry.function ?? 'deploy', status:'FINALIZED',
-          execution:receipt.execution_result, result:receipt.result, actor:tx.from_address,
+          execution:receipt.execution_result, result:resultSummary(receipt.result), actor:tx.from_address,
           contractError:receipt.genvm_result?.stderr?.match(/^ValueError: ([A-Z_]+)$/m)?.[1],
           equivalenceOutputs:Object.keys(receipt.eq_outputs ?? {}),
           votes:tx.consensus_data.votes};

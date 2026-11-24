@@ -8,8 +8,9 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "python3 -m unittest discover -s tests -v && node --test tests/*.test.js",
     "schema": "node scripts/check-schema.mjs",
-    "deploy": "node scripts/deploy.mjs",
-    "live": "node scripts/live.mjs"
+    "deploy": "node scripts/deploy-oci.mjs",
+    "live": "node scripts/live-oci.mjs",
+    "verify:oci": "node scripts/verify-oci.mjs"
   },
   "keywords": [],
   "author": "",
